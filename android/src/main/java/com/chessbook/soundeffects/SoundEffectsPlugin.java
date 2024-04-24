@@ -17,6 +17,6 @@ public class SoundEffectsPlugin extends Plugin {
 
         JSObject ret = new JSObject();
         ret.put("value", "unimplemented");
-        call.resolve("blah");
+        // call.resolve("blah");
     }
 }
