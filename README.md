@@ -13,24 +13,24 @@ npx cap sync
 
 <docgen-index>
 
-* [`echo(...)`](#echo)
+* [`playSound(...)`](#playsound)
 
 </docgen-index>
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
-### echo(...)
+### playSound(...)
 
 ```typescript
-echo(options: { value: string; }) => Promise<{ value: string; }>
+playSound(options: { filename: string; }) => Promise<string>
 ```
 
-| Param         | Type                            |
-| ------------- | ------------------------------- |
-| **`options`** | <code>{ value: string; }</code> |
+| Param         | Type                               |
+| ------------- | ---------------------------------- |
+| **`options`** | <code>{ filename: string; }</code> |
 
-**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+**Returns:** <code>Promise&lt;string&gt;</code>
 
 --------------------
 

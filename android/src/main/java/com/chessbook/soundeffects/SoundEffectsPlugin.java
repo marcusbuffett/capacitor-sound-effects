@@ -12,11 +12,11 @@ public class SoundEffectsPlugin extends Plugin {
     private SoundEffects implementation = new SoundEffects();
 
     @PluginMethod
-    public void echo(PluginCall call) {
-        String value = call.getString("value");
+    public void playSound(PluginCall call) {
+        // String value = call.getString("value");
 
         JSObject ret = new JSObject();
-        ret.put("value", implementation.echo(value));
-        call.resolve(ret);
+        ret.put("value", "unimplemented");
+        call.resolve("blah");
     }
 }

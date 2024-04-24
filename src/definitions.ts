@@ -1,3 +1,3 @@
 export interface SoundEffectsPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+	playSound(options: { filename: string }): Promise<string>;
 }
