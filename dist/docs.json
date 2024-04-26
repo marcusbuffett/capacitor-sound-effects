@@ -1,0 +1,31 @@
+{
+  "api": {
+    "name": "SoundEffectsPlugin",
+    "slug": "soundeffectsplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "playSound",
+        "signature": "(options: { filename: string; }) => Promise<string>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ filename: string; }"
+          }
+        ],
+        "returns": "Promise<string>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "playsound"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [],
+  "enums": [],
+  "typeAliases": [],
+  "pluginConfigs": []
+}
