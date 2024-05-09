@@ -1,6 +1,7 @@
 import Foundation
 import Capacitor
 import AVFoundation
+import SwiftySound
 
 /**
  * Please read the Capacitor iOS Plugin Development Guide
@@ -8,7 +9,6 @@ import AVFoundation
  */
 @objc(SoundEffectsPlugin)
 public class SoundEffectsPlugin: CAPPlugin {
-    private var playerCache: [String: AVAudioPlayer] = [:]
 
     @objc func playSound(_ call: CAPPluginCall) {
         try? AVAudioSession.sharedInstance().setCategory(.ambient)
@@ -28,20 +28,8 @@ public class SoundEffectsPlugin: CAPPlugin {
         }
 
         let url = URL(fileURLWithPath: path)
-        print(url)
-
-        if let player = playerCache[path] {
-            // Use the cached player if available
-            player.play()
-        } else {
-            do {
-                let player = try AVAudioPlayer(contentsOf: url)
-                playerCache[path] = player
-                player.play()
-            } catch let error {
-                print(error.localizedDescription)
-            }
-        }
+        Sound.category = .ambient
+        Sound.play(url: url)
 
         call.resolve([
             "value": "success"
